@@ -22,15 +22,19 @@ ruleTester.run('prefer-inferred-const', rule, {
   invalid: [
     {
       code: 'const name: string = "foo"',
+      output: 'const name = "foo"',
       errors: [{ messageId: 'preferInference' }],
     },
     {
       code: `const getBurger = (): string => 'Big Mac'
          const food: string = getBurger()`,
+      output: `const getBurger = (): string => 'Big Mac'
+         const food = getBurger()`,
       errors: [{ messageId: 'preferInference' }],
     },
     {
       code: `const name: MyCustomTypeThatIsntAPrimitive = 'foo'`,
+      output: `const name = 'foo'`,
       errors: [{ messageId: 'preferInference' }],
     },
   ],
