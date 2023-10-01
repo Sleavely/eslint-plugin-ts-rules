@@ -1,5 +1,9 @@
 # @sleavely/eslint-plugin-ts-rules
 
+Opinionated rules for maintainable projects.
+
+This plugin is a Typescript complement to the Javascript rules in [`@sleavely/eslint-plugin-js-rules`](https://github.com/Sleavely/eslint-plugin-js-rules).
+
 ## Installing
 
 ```sh
