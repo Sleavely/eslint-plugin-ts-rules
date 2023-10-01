@@ -27,7 +27,9 @@ module.exports = {
 
 ### ts-rules/prefer-inferred-const
 
-A `const` variable should generally never change, and even if it does it should be contained within the same type, so inference can be used.
+If [`no-inferrable-types`](https://typescript-eslint.io/rules/no-inferrable-types/) had a very strict parent, this rule would be it.
+
+A `const` variable should generally never change, and even if it does it should be contained within the same type that it was originally inferred from.
 
 ```ts
 
